@@ -8,12 +8,12 @@
           <PrismicRichText :field="item.fig" class="px-4 md:px-0 max-w-xs text-gray-300 !pl-1 text-xs"/>
           <div class="absolute inline-0 z-40 h-full w-full top-0 hidden md:block"></div>
         </div>
-    </VueSlickCarousel><div v-if="slice.items.length > 1" class="flex justify-between px-4 h-12 w-full -translate-y-1/2 absolute top-1/3"> <button @click="ashowPrev" ><i :style="{'border-color':slice.primary.arrowcolor}" class="arrow left "></i></button><button @click="ashowNext" ><i :style="{'border-color':slice.primary.arrowcolor}" class="arrow right"></i></button></div>
+    </VueSlickCarousel><div v-if="slice.items.length > 1" class="flex justify-between px-4 h-12 w-full -translate-y-1/2 absolute top-1/3"> <button @click="ashowPrev" ><i :style="{'border-color':'black'}" class="arrow left "></i></button><button @click="ashowNext" ><i :style="{'border-color':'black'}" class="arrow right"></i></button></div>
   <div :class="{ aaaaactive: ssshowMobileMenu}" class="transition-all max-h-0 md:max-h-none grid grid-cols-1 items-center justify-items-start pt-3 px-4 md:px-0"><PrismicRichText :field="slice.primary.title" class=" hidden md:block font-metrikbold !pl-1 text-[0.94rem]"/><div class="block md:hidden items-baseline flex gap-2"><PrismicRichText :field="slice.primary.title" class="!text-xl pb-4" @click="ssshowMobileMenu = !ssshowMobileMenu"/><b v-if="ssshowMobileMenu">(-)</b><b v-else>(+)</b></div>
       <PrismicRichText :field="slice.primary.description" class="max-w-2xl font-metrik !pl-1 leading-tight text-[0.94rem]" /></div>
   </div></div>
   <div v-if="!slice.primary.open" class="hidden md:block">
-    <div @click="sshowMobileMenu = !sshowMobileMenu" :class="{ mba: sshowMobileMenu}" class="flex items-center h-7 cursor-pointer transition-all"><b v-if="sshowMobileMenu" class="mb-[5px] text-lg font-bold" :style="{'color':slice.primary.color}">&#8854;</b><b v-else class="mb-[5px] text-lg font-bold" :style="{'color':slice.primary.color}">&#8853;</b><PrismicRichText :field="slice.primary.namedateyear" class="px-4 md:px-0 font-circular text-sm !pl-1"/></div><div :class="{ aactive: sshowMobileMenu}" class="max-h-0 transition-all overflow-hidden relative duration-500">
+    <div @click="sshowMobileMenu = !sshowMobileMenu" :class="{ mba: sshowMobileMenu}" class="flex items-center h-7 cursor-pointer transition-all"><b v-if="sshowMobileMenu" class="mb-[5px] text-lg font-bold" :style="{'color':'black'}">&#8854;</b><b v-else class="mb-[5px] text-lg font-bold" :style="{'color':slice.primary.color}">&#8853;</b><PrismicRichText :field="slice.primary.namedateyear" class="px-4 md:px-0 font-circular text-sm !pl-1"/></div><div :class="{ aactive: sshowMobileMenu}" class="max-h-0 transition-all overflow-hidden relative duration-500">
       
     <VueSlickCarousel ref=uid :variableWidth="true" :autoplaySpeed="5000" :arrows="false" :autoplay="true" >
       <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="relative">    
@@ -21,7 +21,7 @@
           <PrismicRichText :field="item.fig" class="px-4 md:px-0 max-w-xs text-gray-300 !pl-1 text-xs"/>
           <div class="absolute inline-0 z-40 h-full w-full top-0 hidden md:block"></div>
         </div>
-    </VueSlickCarousel><div v-if="slice.items.length > 1" class="flex justify-between px-4 h-12 w-full -translate-y-1/2 absolute top-1/3"> <button @click="showPrev" class="hidden md:block"><i :style="{'border-color':slice.primary.arrowcolor}" class="arrow left "></i></button><button @click="showNext" class="hidden md:block"><i :style="{'border-color':slice.primary.arrowcolor}" class="arrow right"></i></button></div>
+    </VueSlickCarousel><div v-if="slice.items.length > 1" class="flex justify-between px-4 h-12 w-full -translate-y-1/2 absolute top-1/3"> <button @click="showPrev" class="hidden md:block"><i :style="{'border-color':'black'}" class="arrow left "></i></button><button @click="showNext" class="hidden md:block"><i :style="{'border-color':'black'}" class="arrow right"></i></button></div>
   <div :class="{ aaaaactive: ssshowMobileMenu}" class="transition-all max-h-0 md:max-h-none grid grid-cols-1 items-center justify-items-start pt-3 px-4 md:px-0"><PrismicRichText :field="slice.primary.title" class=" hidden md:block font-metrikbold !pl-1 text-[0.94rem]"/><div class="block md:hidden items-baseline flex gap-2"><PrismicRichText :field="slice.primary.title" class="!text-xl pb-4" @click="ssshowMobileMenu = !ssshowMobileMenu"/><b v-if="ssshowMobileMenu">(-)</b><b v-else>(+)</b></div>
       <PrismicRichText :field="slice.primary.description" class="max-w-2xl font-metrik !pl-1 leading-tight text-[0.94rem]" /></div>
   </div></div>

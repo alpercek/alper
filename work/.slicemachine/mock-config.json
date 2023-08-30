@@ -1,0 +1,12 @@
+{
+  "slices": {
+    "Project": {
+      "default": {
+        "primary": {}
+      }
+    }
+  },
+  "_cts": {
+    "page": {}
+  }
+}

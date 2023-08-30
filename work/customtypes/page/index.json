@@ -62,6 +62,9 @@
             },
             "exhibitions": {
               "type": "SharedSlice"
+            },
+            "about_text": {
+              "type": "SharedSlice"
             }
           }
         }

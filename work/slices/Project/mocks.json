@@ -38,13 +38,8 @@
       },
       "color": {
         "__TYPE__": "FieldContent",
-        "value": "#081db3",
+        "value": "#0461b5",
         "type": "Color"
-      },
-      "arrowcolor": {
-        "__TYPE__": "FieldContent",
-        "value": "white",
-        "type": "Select"
       },
       "open": {
         "__TYPE__": "BooleanContent",

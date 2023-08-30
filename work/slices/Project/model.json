@@ -41,20 +41,8 @@
         "color": {
           "type": "Color",
           "config": {
-            "label": "top border line color",
+            "label": "color",
             "placeholder": ""
-          }
-        },
-        "arrowcolor": {
-          "type": "Select",
-          "config": {
-            "label": "arrowcolor",
-            "placeholder": "",
-            "options": [
-              "white",
-              "black"
-            ],
-            "default_value": "white"
           }
         },
         "open": {

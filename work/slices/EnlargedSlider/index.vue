@@ -5,17 +5,17 @@
       
     <VueSlickCarousel  ref="carousel" :arrows="false" :dots="true" :fade="true"  class="z-0 h-[calc(100vh-5.5rem)] w-full">
         <template #customPaging="page">
-      <div class="custom-dot font-circular !font-normal text-xs ">
+      <div class="custom-dot font-circular !font-normal text-lg ">
         {{ page+1 }}
       </div>
     </template>
       <div v-for="(item, i) in slice.items" :key="`slice-item-${i}` " class="!relative !grid items-center gap-1">    
         <div class="flex w-full justify-center"><PrismicImage :field="item.image" class="h-[calc(100vh-5.5rem)] object-scale-down"/></div>
-          <div class="!no-underline justify-start ml-[calc(44vw-1rem)] md:ml-[calc(44vw-3rem)] text-xs font-metrik max-w-sm">{{ $prismic.asText(item.title) }}<span v-if="$prismic.asText(item.title).length === 0">{{ $prismic.asText(slice.items[0].title) }}</span><span v-if="$prismic.asText(item.year).length === 0 && $prismic.asText(slice.items[0].year).length !== 0"> ({{ $prismic.asText(slice.items[0].year) }})</span><span v-if="$prismic.asText(item.year).length !== 0"> ({{ $prismic.asText(item.year) }})</span> <span v-if="$prismic.asText(slice.items[0].dimentions).length !== 0 && $prismic.asText(slice.items[0].materials).length !== 0 || $prismic.asText(item.dimentions).length !== 0 && $prismic.asText(item.materials).length !== 0">-</span> <span v-if="$prismic.asText(item.materials).length === 0">{{ $prismic.asText(slice.items[0].materials) }}</span>{{ $prismic.asText(item.materials) }}<span v-if="$prismic.asText(item.dimentions).length !== 0 && $prismic.asText(item.materials).length !== 0 || $prismic.asText(slice.items[0].dimentions).length !== 0 && $prismic.asText(slice.items[0].materials).length !== 0">,</span><span v-if="$prismic.asText(item.dimentions).length === 0"> {{ $prismic.asText(slice.items[0].dimentions) }}</span> {{ $prismic.asText(item.dimentions) }}<span v-if="$prismic.asText(item.location).length !== 0"> ({{ $prismic.asText(item.location) }})</span><span v-if="$prismic.asText(item.location).length === 0"> ({{ $prismic.asText(slice.items[0].location) }})</span></div>
+          <div class="!no-underline justify-start ml-[calc(44vw-1rem)] md:ml-[calc(44vw-3rem)] text-lg font-metrik max-w-sm">{{ $prismic.asText(item.title) }}<span v-if="$prismic.asText(item.title).length === 0">{{ $prismic.asText(slice.items[0].title) }}</span><span v-if="$prismic.asText(item.year).length === 0 && $prismic.asText(slice.items[0].year).length !== 0"> ({{ $prismic.asText(slice.items[0].year) }})</span><span v-if="$prismic.asText(item.year).length !== 0"> ({{ $prismic.asText(item.year) }})</span> <span v-if="$prismic.asText(slice.items[0].dimentions).length !== 0 && $prismic.asText(slice.items[0].materials).length !== 0 || $prismic.asText(item.dimentions).length !== 0 && $prismic.asText(item.materials).length !== 0">-</span> <span v-if="$prismic.asText(item.materials).length === 0">{{ $prismic.asText(slice.items[0].materials) }}</span>{{ $prismic.asText(item.materials) }}<span v-if="$prismic.asText(item.dimentions).length !== 0 && $prismic.asText(item.materials).length !== 0 || $prismic.asText(slice.items[0].dimentions).length !== 0 && $prismic.asText(slice.items[0].materials).length !== 0">,</span><span v-if="$prismic.asText(item.dimentions).length === 0"> {{ $prismic.asText(slice.items[0].dimentions) }}</span> {{ $prismic.asText(item.dimentions) }}<span v-if="$prismic.asText(item.location).length !== 0"> ({{ $prismic.asText(item.location) }})</span><span v-if="$prismic.asText(item.location).length === 0"> ({{ $prismic.asText(slice.items[0].location) }})</span></div>
           
           <div :id="i"  class="absolute inline-0 z-40 h-full w-full top-0 cursor-zoom-in misir"></div>
         </div>
-    </VueSlickCarousel><div class="flex justify-between px-4 h-12 w-full -translate-y-1/2 absolute top-1/2" v-if="slice.items.length > 1"> <button @click="showPrev" class="hidden md:block"><i class="arrow left !border-neutral-100"></i></button><button @click="showNext" class="hidden md:block"><i class="arrow right !border-neutral-100"></i></button></div>
+    </VueSlickCarousel><div class="flex justify-between px-4 h-12 w-full -translate-y-1/2 absolute top-1/2" v-if="slice.items.length > 1"> <button @click="showPrev" class="hidden md:block"><i class="arrow left !border-neutral-500"></i></button><button @click="showNext" class="hidden md:block"><i class="arrow right !border-neutral-500"></i></button></div>
   
   </div></div></Bounded><div><div v-for="(item, i) in slice.items" :key="`slice-item-${i}` "><div :id="i+'a'" @click="sakla" class="overflow-scroll hidden h-screen w-screen inset-0 fixed z-50 cursor-crosshair kaykay ff"><PrismicImage :field="item.image" class="w-[200%] z-60 !max-w-none"/></div></div></div></div>
 </template>
@@ -107,8 +107,8 @@ for (let index = 0; index < fed.length; index++) {
 }
 .slick-dots{
 width: unset;
-bottom: -25px;
-right: calc(56vw + 1rem);;
+bottom: -32px;
+right: calc(56vw + 1.2rem);;
 
 }
 .slick-dots li{

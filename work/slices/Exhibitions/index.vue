@@ -4,7 +4,7 @@
       <div class="block md:hidden items-baseline flex gap-2" @click="sshowMobileMenu = !sshowMobileMenu"><p class="!text-2xl pb-4 font-metrikbold" >Exhibitions</p><b v-if="sshowMobileMenu" class="!text-2xl">(-)</b><b v-else class="!text-2xl">(+)</b></div>
       
         <div class="max-w-sm md:max-w-4xl grid grid-cols-1 md:justify-items-stretch items-center gap-0 justify-items-start text-lg font-metrik md:text-base"><div v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
-          <i v-if="i === 0">{{ item.field }}</i> <div v-else-if="i>0"><i v-if=" item.field !== slice.items[i-1].field">{{ item.field }}</i></div>  
+          <i  v-if="i === 0">{{ item.field }}</i> <div v-else-if="i>0"><i v-if=" item.field !== slice.items[i-1].field"><br>{{ item.field }}</i></div>  
           <div class="flex  gap-4"><PrismicRichText :field="item.date" class=" flex-[1_0_auto] w-11 md:!leading-tight leading-normal"/>
           <PrismicRichText :field="item.title" class="md:w-full md:!leading-tight leading-normal"/></div>
         </div></div></div></div>

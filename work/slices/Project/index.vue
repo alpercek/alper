@@ -37,7 +37,7 @@
     </VueSlickCarousel>
   <div class="transition-all grid grid-cols-1 items-center gap-4 justify-items-start pt-1 px-4 md:px-0 tracking-tight"><PrismicRichText :field="slice.primary.title" class="!text-[1.438rem] hidden md:block"/><div class="block md:hidden items-baseline flex  !text-[1.438rem] gap-2"><PrismicRichText :field="slice.primary.title" class=" pb-4 font-metrikbold" /></div>
       <PrismicRichText :field="slice.primary.description" class="max-w-2xl text-lg font-metrik" /></div>
-  </div></div></Bounded><div class="underlinetarget px-0 border-t-2 border-top-color-[#00BAFF] hidden w-screen"></div></div>
+  </div></div></Bounded><div class="underlinetarget px-0 border-t-2 border-black hidden w-screen"></div></div>
 </template>
 
 <script>
@@ -83,6 +83,9 @@ import { slice } from 'lodash'
  let ale = utt.length
       utt[ale-1].style.display = "block"
   let hidden = document.getElementsByClassName("hidden")
+  var tmp = document.getElementsByTagName("section")[this.index].getElementsByTagName("em")[0].innerHTML
+  tmp = '<br>' + tmp
+  document.getElementsByTagName("section")[this.index].getElementsByTagName("em")[0].innerHTML = tmp
   
   for (let index = 0; index < hidden.length; index++) {
     if (window.screen.width<766) {
@@ -99,7 +102,7 @@ import { slice } from 'lodash'
   }
   
 </script> 
-<style>
+<style scoped>
 .aactive{
   max-height: 40rem;
   padding-bottom: 2rem;
@@ -127,5 +130,4 @@ import { slice } from 'lodash'
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
-
 </style>
